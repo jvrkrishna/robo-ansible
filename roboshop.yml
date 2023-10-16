@@ -1,4 +1,4 @@
-- name: Configuring nginx server
+- name: Configuring {{ component }} server
   hosts: all
   become: yes
   roles:
