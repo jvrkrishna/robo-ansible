@@ -9,4 +9,4 @@
     state: latest
 
 - name: Installing Nodejs Server
-  ansible.builtin.shell: mongo --host mongodb-dev.rkdevops.store </app/schema/catalogue.js
+  ansible.builtin.shell: mongo --host mongodb-dev.rkdevops.store </app/schema/{{ component }}.js

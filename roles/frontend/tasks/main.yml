@@ -1,4 +1,4 @@
-- name: Installing Nginx Server
+- name: Installing {{ component }} Server
   ansible.builtin.yum:
     name: nginx
     state: latest
@@ -15,7 +15,7 @@
 
 - name: Downloading new app content
   ansible.builtin.unarchive:
-    src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+    src: https://roboshop-artifacts.s3.amazonaws.com/{{ component }}.zip
     dest: /usr/share/nginx/html
     remote_src: yes
 

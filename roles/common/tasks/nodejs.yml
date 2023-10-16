@@ -17,8 +17,8 @@
 
 - name: Copying Service File
   ansible.builtin.copy:
-    src: catalogue.service
-    dest: /etc/systemd/system/catalogue.service
+    src: { { component } }.service
+    dest: /etc/systemd/system/{{ component }}.service
 
 - name: Service restarting and enabling
   ansible.builtin.include_tasks:
