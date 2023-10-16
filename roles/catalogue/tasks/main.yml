@@ -1,0 +1,9 @@
+- name: Configuring Catalogue Server
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: nodejs
+
+- name: Configuring Mongo Schema
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: mongo_schema

@@ -1,0 +1,6 @@
+- name: Starting and Enabling catalogue Server
+  ansible.builtin.service:
+    name: catalogue
+    state: restarted
+    enabled: yes
+    daemon_reload: true
