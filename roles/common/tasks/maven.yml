@@ -17,11 +17,6 @@
   ansible.builtin.import_tasks:
     file: mysql_schema_setup.yml
 
-- name: Copying Service File
-  ansible.builtin.template:
-    src: "{{ component }}.service"
-    dest: /etc/systemd/system/{{ component }}.service
-
 - name: Service restarting and enabling
   ansible.builtin.include_tasks:
     file: app_start.yml
