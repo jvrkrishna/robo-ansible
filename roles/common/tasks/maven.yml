@@ -12,12 +12,13 @@
   args:
     chdir: /app
 
+
 - name: Load Mysql Schema
   ansible.builtin.import_tasks:
     file: mysql_schema_setup.yml
 
 - name: Copying Service File
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: "{{ component }}.service"
     dest: /etc/systemd/system/{{ component }}.service
 
