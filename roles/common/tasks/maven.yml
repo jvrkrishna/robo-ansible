@@ -16,6 +16,11 @@
   ansible.builtin.import_tasks:
     file: mysql_schema_setup.yml
 
-- name: SystemD Setup
-  ansible.builtin.import_tasks:
+- name: Copying Service File
+  ansible.builtin.copy:
+    src: "{{ component }}.service"
+    dest: /etc/systemd/system/{{ component }}.service
+
+- name: Service restarting and enabling
+  ansible.builtin.include_tasks:
     file: app_start.yml
