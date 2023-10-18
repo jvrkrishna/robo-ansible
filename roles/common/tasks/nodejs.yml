@@ -15,6 +15,10 @@
   args:
     chdir: /app
 
+- name: Loading Mongo schema
+  ansible.builtin.include_tasks:
+    file: mongo_schema.yml
+
 - name: Service restarting and enabling
   ansible.builtin.include_tasks:
     file: app_start.yml
