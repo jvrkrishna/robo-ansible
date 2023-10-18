@@ -1,4 +1,4 @@
-- name: Copying Service File
+- name: Downloading Mongo repo
   ansible.builtin.copy:
     src: mongo.repo
     dest: /etc/yum.repos.d/mongodb.repo
