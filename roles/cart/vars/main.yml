@@ -1,2 +1,2 @@
 component: cart
-mongo_schema: false
+load_schema: false

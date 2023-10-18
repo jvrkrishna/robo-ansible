@@ -1,2 +1,2 @@
 component: catalogue
-mongo_schema: true
+load_schema: true

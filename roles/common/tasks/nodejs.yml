@@ -18,6 +18,7 @@
 - name: Loading Mongo schema
   ansible.builtin.include_tasks:
     file: mongo_schema.yml
+  when: load_schema
 
 - name: Service restarting and enabling
   ansible.builtin.include_tasks:
