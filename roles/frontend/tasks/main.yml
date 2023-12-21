@@ -19,6 +19,11 @@
     dest: /usr/share/nginx/html
     remote_src: yes
 
+- name: Configuring custom log format
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
 - name: Configuring Reverse Proxy
   ansible.builtin.template:
     src: roboshop.conf
