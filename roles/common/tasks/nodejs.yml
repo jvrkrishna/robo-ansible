@@ -1,5 +1,10 @@
 - name: Installing Nodejs Server
-  ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+  ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_19.x | sudo -E bash -
+
+- name: Installing Nodejs Server
+  ansible.builtin.yum:
+    name: nodejs
+    state: latest
 
 - name: Installing Nodejs Server
   ansible.builtin.yum:
